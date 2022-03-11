@@ -22,7 +22,7 @@ const MusicForm = (props) => {
 
     return ( 
         <form onSubmit={handleSubmit}>
-            <div className="form-group">
+            <div className="form-group" style={{marginLeft: '6rem', marginRight: '6rem', marginTop: '3rem'}}>
                 <h2>Add a song!</h2>
                     <label>Title</label>
                         <input type='text' className="form-control" value={title} onChange={(event) => setTitle(event.target.value)} />
@@ -34,8 +34,8 @@ const MusicForm = (props) => {
                         <input type='date' className='form-control' value={date} onChange={(event) => setDate(event.target.value)} />
                     <label>Genre</label>
                         <input type='text' className='form-control' value={genre} onChange={(event) => setGenre(event.target.value)} />
+            <button style={{marginTop: '.5rem'}} type='submit' className='btn btn-primary'>SEND</button>
             </div>
-            <button type='submit' className='btn btn-primary'>SEND</button>
         </form>
      );
 }
