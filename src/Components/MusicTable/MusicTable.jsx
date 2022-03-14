@@ -2,9 +2,9 @@
 const MusicTable = (props) => {
 
     return ( 
-        <div className='container'>
-            <h2>Hello!</h2>
-            <table className='table table-striped'>
+        <div className='container' style={{marginLeft: '6rem', marginRight: '6rem', marginTop: '3rem'}}>
+            <h2>Song List</h2>
+            <table className='table'>
                 <thead>
                     <tr>
                         <th>Title</th>

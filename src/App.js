@@ -15,7 +15,7 @@ function App() {
 
   useEffect(() => {
       getAllSongs();
-  })
+  }, [setSong]);
 
   async function getAllSongs(){
       let response = await axios.get('http://127.0.0.1:8000/music/')
