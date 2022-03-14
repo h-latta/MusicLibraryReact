@@ -8,6 +8,11 @@ const MusicForm = (props) => {
     const [date, setDate] = useState('')
     const [genre, setGenre] = useState('')
 
+    async function createSong(newSong){
+        let response = await axios.post('http://127.0.0.1:8000/music/', newSong);
+        console.log(response.data)
+    };
+
     function handleSubmit(event){
         event.preventDefault();
         let newSong = {
@@ -17,13 +22,9 @@ const MusicForm = (props) => {
             release_date: date,
             genre: genre
         };
-        createSong(newSong)
-    }
+        createSong(newSong);
+    };
 
-    async function createSong(newSong){
-        let response = await axios.post('http://127.0.0.1:8000/music/', newSong);
-        console.log(response.data)
-    }
     return ( 
         <form onSubmit={handleSubmit}>
             <div className="form-group" style={{marginLeft: '6rem', marginRight: '6rem', marginTop: '3rem'}}>
