@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import axios from 'axios';
 
 const MusicForm = (props) => {
     const [title, setTitle] = useState('')
@@ -14,12 +14,16 @@ const MusicForm = (props) => {
             title: title,
             artist: artist,
             album: album,
-            date: date,
+            release_date: date,
             genre: genre
         };
-        console.log(newSong)
+        createSong(newSong)
     }
 
+    async function createSong(newSong){
+        let response = await axios.post('http://127.0.0.1:8000/music/', newSong);
+        console.log(response.data)
+    }
     return ( 
         <form onSubmit={handleSubmit}>
             <div className="form-group" style={{marginLeft: '6rem', marginRight: '6rem', marginTop: '3rem'}}>
