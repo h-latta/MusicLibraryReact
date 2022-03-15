@@ -2,6 +2,7 @@ import './App.css';
 import React, { useState, useEffect } from 'react';
 import MusicForm from './Components/MusicForm/MusicForm';
 import MusicTable from './Components/MusicTable/MusicTable';
+import NavBar from './Components/NavBar/NavBar';
 import axios from 'axios';
 
 
@@ -25,6 +26,9 @@ function App() {
 
   return (
     <div className='backimage'>
+      <nav>
+        <NavBar />
+      </nav>
       <div>
         <MusicForm createSong={addNewSong}/>
       </div>

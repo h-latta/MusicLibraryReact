@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import './MusicForm.css'
 
 const MusicForm = (props) => {
     const [title, setTitle] = useState('')
@@ -27,7 +28,7 @@ const MusicForm = (props) => {
 
     return ( 
         <form onSubmit={handleSubmit}>
-            <div className="form-group" style={{marginLeft: '6rem', marginRight: '6rem', marginTop: '3rem'}}>
+            <div className="form-group" style={{marginLeft: '6rem', marginRight: '6rem', paddingTop: '4rem'}}>
                 <h2>Add a song!</h2>
                     <label>Title</label>
                         <input type='text' className="form-control" value={title} onChange={(event) => setTitle(event.target.value)} />

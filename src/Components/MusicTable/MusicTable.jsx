@@ -2,7 +2,7 @@
 const MusicTable = (props) => {
 
     return ( 
-        <div className='container' style={{marginLeft: '6rem', marginRight: '6rem', marginTop: '3rem'}}>
+        <div className='container' style={{marginLeft: '5rem', marginRight: '5rem', marginTop: '3rem'}}>
             <h2>Song List</h2>
             <table className='table'>
                 <thead>
